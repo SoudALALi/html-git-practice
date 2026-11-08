@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>☕ Coffee Shop Menu · 10 items</title>
+  <style>
+    /* minimal reset + warm coffee-shop vibes */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f9f3eb;          /* warm cream, like a paper menu */
+      font-family: 'Segoe UI', 'Helvetica Neue', system-ui, -apple-system, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 1.8rem;
+    }
+
+    /* main menu card – soft, rounded, like a chalkboard or card */
+    .menu-card {
+      max-width: 720px;
+      width: 100%;
+      background: #fffffffb;
+      border-radius: 2.5rem;
+      padding: 2.8rem 2.2rem;
+      box-shadow: 0 25px 40px -15px rgba(70, 40, 20, 0.25), 0 10px 20px -8px rgba(0,0,0,0.05);
+      border: 1px solid #efe1d2;
+      backdrop-filter: blur(1px);
+      transition: all 0.2s;
+    }
+
+    /* header area */
+    .shop-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .shop-header h1 {
+      font-size: 2.6rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      color: #3f2a1b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .shop-header h1 span {
+      font-size: 2.2rem;
+      opacity: 0.9;
+    }
+
+    .shop-header .tagline {
+      font-size: 1.1rem;
+      color: #8b6f58;
+      margin-top: 0.5rem;
+      font-style: italic;
+      border-bottom: 1px dashed #dcc9b8;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+
+    /* menu list – simple, clean, 10 items */
+    .menu-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      margin: 2rem 0 1rem;
+    }
+
+    /* each item row */
+    .menu-item {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      font-size: 1.2rem;
+      padding: 0.6rem 0.4rem;
+      border-bottom: 1px dotted #e5d5c5;
+      transition: background 0.1s;
+    }
+
+    .menu-item:hover {
+      background: #fefaf5;
+      border-radius: 12px;
+      padding-left: 0.8rem;
+      padding-right: 0.8rem;
+      margin: 0 -0.4rem;
+      border-bottom-color: transparent;
+    }
+
+    .item-name {
+      font-weight: 500;
+      color: #2f2016;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* small coffee emoji per item (optional, decorative) */
+    .item-name .emoji {
+      font-size: 1.3rem;
+      filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
+    }
+
+    .item-price {
+      font-weight: 600;
+      color: #6e4d33;
+      background: #f7efe8;
+      padding: 0.25rem 1rem;
+      border-radius: 40px;
+      font-size: 1.05rem;
+      letter-spacing: 0.3px;
+      border: 1px solid #eadbcb;
+      white-space: nowrap;
+    }
+
+    /* note at bottom – like a chalkboard message */
+    .menu-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eddccb;
+      color: #a4836a;
+      font-size: 0.95rem;
+    }
+
+    .menu-footer .beans {
+      display: flex;
+      gap: 0.3rem;
+      font-size: 1.1rem;
+    }
+
+    /* tiny responsiveness */
+    @media (max-width: 550px) {
+      .menu-card {
+        padding: 1.8rem 1.2rem;
+      }
+      .shop-header h1 {
+        font-size: 2rem;
+      }
+      .item-name {
+        font-size: 1rem;
+      }
+      .item-price {
+        font-size: 0.95rem;
+        padding: 0.2rem 0.8rem;
+      }
+      .menu-item {
+        font-size: 1.05rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-card">
+    <div class="shop-header">
+      <h1>
+        <span>☕</span> Roast &amp; Co. <span>🫘</span>
+      </h1>
+      <div class="tagline">— small batch · simple menu —</div>
+    </div>
+
+    <!-- 10 coffee shop items (exactly ten) -->
+    <div class="menu-list">
+      <!-- 1 -->
+      <div class="menu-item">
+        <span class="item-name"><span class="emoji">☕</span> Espresso</span>
+        <span class="item-price">$2.80</span>
+      </div>
+      <!-- 2 -->
+      <div class="menu-item">
+        <span class="item-name"><span class="emoji">🥛</span> Flat White</span>
+        <span class="item-price">$4.20</span>
+      </div>
+      <!-- 3 -->
+      <div class="menu-item">
+        <span class="item-name"><span class="emoji">🧋</span> Cappuccino</span>
+        <span class="item-price">$4.00</span>
+      </div>
+      <!-- 4 -->
+      <div class="menu-item">
+        <span class="item-name"><span class="emoji">🍫</span> Mocha</span>
+        <span class="item-price">$4.80</span>
+      </div>
+      <!-- 5 -->
+      <div class="menu-item">
+        <span class="item-name"><span class="emoji">🧊</span> Cold Brew</span>
+        <span class="item-price">$4.50</span>
+      </div>
+      <!-- 6 -->
+      <div class="menu-item">
+        <span class="item-name"><span class="emoji">🥛</span> Latte</span>
+        <span class="item-price">$4.30</span>
+      </div>
+      <!-- 7 -->
+      <div class="menu-item">
+        <span class="item-name"><span class="emoji">🍵</span> Matcha Latte</span>
+        <span class="item-price">$5.20</span>
+      </div>
+      <!-- 8 -->
+      <div class="menu-item">
+        <span class="item-name"><span class="emoji">🥐</span> Croissant</span>
+        <span class="item-price">$3.50</span>
+      </div>
+      <!-- 9 -->
+      <div class="menu-item">
+        <span class="item-name"><span class="emoji">🧁</span> Blueberry Muffin</span>
+        <span class="item-price">$3.20</span>
+      </div>
+      <!-- 10 -->
+      <div class="menu-item">
+        <span class="item-name"><span class="emoji">🍪</span> Chocolate Cookie</span>
+        <span class="item-price">$2.50</span>
+      </div>
+    </div>
+
+    <!-- small footer, pure decoration -->
+    <div class="menu-footer">
+      <span>☕ fresh roast daily</span>
+      <span class="beans">☕ ☕ ☕</span>
+      <span>10 items</span>
+    </div>
+  </div>
+</body>
+</html>
